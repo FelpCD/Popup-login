@@ -31,6 +31,11 @@ header{
     font-weight: bolde;
 }
 
+nav{
+    display: flex;
+    align-items: center;
+}
+
 /* Links do menu */
 menu a {
     color: white;
@@ -43,6 +48,20 @@ menu a:hover{
     color: #162938;
     transition: .4s;
 }
+
+/* icone menu Hamburguer */
+
+.burguer{
+    display: none;
+    color: #162938;
+    font-size: 2.3em;
+    background: transparent;
+    /* display: flex; */
+    align-items: center;
+    cursor: pointer;
+}
+
+
 
 /* Botão de login */
 
@@ -271,3 +290,64 @@ body{
     text-decoration: underline;
 }
 
+@media (max-width: 960px){
+    .menu{
+        display: none;
+    }
+    .burguer{
+        display: block;
+    }
+
+}
+@media (max-width: 760px){
+    .menu{
+        display: none;
+    }
+    .burguer{
+        display: block;
+    }
+
+    .burguer{
+        margin-left: 30px;
+    }
+    header{
+        padding: 20px 40px;
+    }
+    .cardpopup.active{
+        height: 430px;
+    }
+    .cardpopup{
+        height: 400px;
+        width: 360px;
+    }
+    .form-login h2{
+        font-size: 1.7em;
+    }
+    .btnL{
+        font-size: 1.1em;
+    }
+    .manter-conectado {
+        font-size: .8em;
+        margin-top: 14px;
+    }
+    .box-input label{
+        font-size: 15px;
+    }
+    .box-input{
+        margin: 25px 0px;
+    }
+    .login-cadastro a {
+        font-size: 15px;
+    }
+    .login-cadastro{
+        margin-top: -7px;
+    }
+    .login-cadastro p {
+        margin-top: 30px;
+    }
+    .cardpopup .icone-fechar{
+        height: 35px; 
+        width: 35px;
+        border-radius: 30px;
+    }
+}
