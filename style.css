@@ -1,0 +1,273 @@
+@charset "UTF-8"; 
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Extrutura do cabeçalho */
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 100px;
+    /* background-color: rgb(255, 0, 0); */
+    
+}
+ /* Logo */
+.logo{
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bolde;
+}
+
+/* Links do menu */
+menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding-left: 40px;
+}
+menu a:hover{
+    color: #162938;
+    transition: .4s;
+}
+
+/* Botão de login */
+
+.navegacao .btnLogin-popup{
+    outline: none;
+    height: 45px;
+    width: 130px;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    margin-left: 40px;
+    background-color: transparent;
+    color:  #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btnLogin-popup:hover{
+    background: white;
+    color: rgb(6, 6, 31);
+}
+
+/* Imagem do fundo */
+body{
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh);
+}
+/* Container do card de exibção do popup */
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 1;
+}
+
+/* popup */
+.cardpopup{
+    position: relative;
+    border: 2px solid rgba(255, 255, 255, 0.096);
+    border-radius: 20px;
+    height: 440px;
+    width: 400px;
+    background: rgba(255, 255, 255, 0.229);
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.8);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform .5s ease , height .3s ease;
+}
+
+.cardpopup.active{
+    height: 500px;
+}
+
+.cardpopup.active-popup{
+    transform: scale(1);
+}
+.cardpopup .icone-fechar{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #162938;
+    width: 40px;
+    height: 40px;
+    font-size: 2em;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.cardpopup .form-login{
+    width: 100%;
+    padding: 40px;
+    
+}
+
+
+.cardpopup .card-login{
+     transition: transform .18s ease;
+     transform: translateX(0);
+}
+
+.cardpopup.active .card-login{
+    transition: .18s ease;
+    transform: translateX(-400px);
+}
+
+.cardpopup .card-cadastro{
+    position: absolute;
+    transition: .18s ease;
+    transform: translateX(400px);
+}
+
+.cardpopup.active .card-cadastro{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+
+
+/* inputs */
+.form-login h2{
+    color: #162938;
+    font-size: 2em;
+    text-align: center;
+}
+
+.box-input{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0px;
+}
+
+.box-input label{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    font-weight: 600;
+    color: #162938;
+    pointer-events: none;
+    transition: .5s;
+}
+/* para fazer o label flutuar */
+.box-input input:focus~label,
+.box-input input:valid~label{
+    top: -5px;
+
+}
+.box-input input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    border: none;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 600;
+    padding: 0px 35px 0px 5px;
+}
+
+.box-input .icone{
+    position: absolute;
+    right: 8px;
+    top: 15px;
+    font-size: 1.2em;
+    color: #162938;
+    
+}
+
+/*  */
+.manter-conectado{
+    font-size: .9em;
+    color: #162938;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.manter-conectado label input{
+    accent-color: #162938;
+    margin: 0px 7px 0px 5px;
+}
+
+.manter-conectado a{
+    text-decoration: none;
+    color: #162938;
+    font-weight: 600;
+}
+
+.manter-conectado a:hover{
+    text-decoration: underline;
+}
+
+.btnL {
+    width: 100%;
+    height: 45px;
+    background: #162938;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btnL:hover{
+    background-color: #fff;
+    color: #162938;
+    transition: .5s;
+}
+
+.login-cadastro{
+    font-size: .9em;
+    font-weight: 500;
+    color: #162938;
+    margin-top: 30px;
+    text-align: center;
+}
+.login-cadastro a {
+    text-decoration: none;
+    color: #162938;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+.login-cadastro a:hover{
+    text-decoration: underline;
+}
+

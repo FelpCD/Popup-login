@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <header>
+        <h1><a href="#" class="logo">LOGO</a></h1>
+
+        <nav class="navegacao"> 
+                
+            <menu>
+                    <a href="#">Home</a>
+                    <a href="#">Sobre</a>
+                    <a href="#">Serviços</a>
+                    <a href="#">Contato</a>
+
+                <button class="btnLogin-popup">Login</button>
+
+            </menu>
+        </nav>
+    </header>
+
+<dir class="container"> <!-- Container do card de exibção do popup -->
+
+    <div class="cardpopup"> <!-- O Popup -->
+
+        <span class="icone-fechar">
+            <ion-icon name="close"></ion-icon>
+        </span>
+
+        <!-- form de login -->
+        <div class="form-login card-login">
+            <h2>Login</h2>
+
+            <form action="" method="post">
+
+                <!-- Box do input do email -->
+                <div class="box-input">
+                    
+                    <input type="email" name="email" id="" required>
+
+                    <label for="email">Email</label>
+
+                    <span class="icone">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                </div>
+
+                <!-- Box do input da senha -->
+                <div class="box-input">
+                    
+                    <input type="password" name="senha" id="" required>
+
+                    <label for="senha">Senha</label>
+
+                    <span class="icone">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                </div>
+
+                <!-- Manter conectado -->
+                <div class="manter-conectado">
+
+                    <label for="manter-conectado"><input type="checkbox" name="manter-conectado" id="manter-conectado">Lembre-me</label>
+                
+                    <a href="#">Esqueci minha Senha!</a>
+
+                </div>
+
+                <!-- Botão Login -->
+                <input class="btnL" type="submit" value="Login">
+
+                <!-- div do link para o cadastro -->
+                <div class="login-cadastro">
+                    <p>Não tem uma conta?  <a class="link-registro" href="#">Criar uma conta</a></p>
+                    
+                </div>
+            </form>
+        </div>
+
+
+
+
+
+        
+        <!-- form de cadastro -->
+        <div class="form-login card-cadastro">
+            <h2>Cadastro</h2>
+
+            <form action="" method="post">
+
+                <!-- Box do input usuario  -->
+                <div class="box-input">
+                    <input type="text" name="usuario" id="usuario" required>
+                    <label for="usuario">Usuário</label>
+
+                    <span class="icone">
+                        <ion-icon name="person"></ion-icon>
+                    </span>
+                </div>
+
+                <!-- Box do input do email -->
+                <div class="box-input">
+                    
+                    <input type="email" name="email" id="" required>
+
+                    <label for="email">Email</label>
+
+                    <span class="icone">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                </div>
+
+                <!-- Box do input da senha -->
+                <div class="box-input">
+                    
+                    <input type="password" name="senha" id="" required>
+
+                    <label for="senha">Senha</label>
+
+                    <span class="icone">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                </div>
+
+                <!-- Manter conectado e concordar com os termos -->
+                <div class="manter-conectado concordo-termos">
+
+                    <label for="manter-conectado"><input type="checkbox" name="manter-conectado" id="manter-conectado">Eu concordo com os termos e condições</label>
+                
+                </div>
+
+                <!-- Botão -->
+                <input class="btnL" type="submit" value="Cadastrar">
+
+                <div class="login-cadastro">
+                    <p>Já tem uma conta?  <a class="link-login" href="#">Login</a></p>
+                    
+                </div>
+            </form>
+        </div>
+
+    </div>
+</dir>
+   
+    <script src="script.js"></script>
+    
+</body>
+</html>
